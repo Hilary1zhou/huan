@@ -1,0 +1,14 @@
+0:0:0:0:0:0:0:1 - - [18/Jun/2021:11:27:59 +0800] "GET /travel HTTP/1.1" 302 - http-bio-9959-exec-1 0
+0:0:0:0:0:0:0:1 - - [18/Jun/2021:11:27:59 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-9959-exec-2 0
+0:0:0:0:0:0:0:1 - - [18/Jun/2021:11:27:59 +0800] "GET /travel/findUserServlet HTTP/1.1" 200 4 http-bio-9959-exec-3 181
+0:0:0:0:0:0:0:1 - - [18/Jun/2021:11:28:02 +0800] "GET /travel/login.html HTTP/1.1" 200 3692 http-bio-9959-exec-5 4
+0:0:0:0:0:0:0:1 - - [18/Jun/2021:11:28:02 +0800] "GET /travel/css/login.css HTTP/1.1" 200 2099 http-bio-9959-exec-6 3
+0:0:0:0:0:0:0:1 - - [18/Jun/2021:11:28:02 +0800] "GET /travel/images/login_logo.png HTTP/1.1" 200 1267 http-bio-9959-exec-4 3
+0:0:0:0:0:0:0:1 - - [18/Jun/2021:11:28:02 +0800] "GET /travel/js/jquery-1.11.0.min.js HTTP/1.1" 200 96383 http-bio-9959-exec-8 5
+0:0:0:0:0:0:0:1 - - [18/Jun/2021:11:28:02 +0800] "GET /travel/findUserServlet HTTP/1.1" 200 4 http-bio-9959-exec-10 2
+0:0:0:0:0:0:0:1 - - [18/Jun/2021:11:28:02 +0800] "GET /travel/images/login_bg.png HTTP/1.1" 200 570611 http-bio-9959-exec-9 39
+0:0:0:0:0:0:0:1 - - [18/Jun/2021:11:28:03 +0800] "GET /travel/checkCode HTTP/1.1" 200 393 http-bio-9959-exec-7 1074
+0:0:0:0:0:0:0:1 - - [18/Jun/2021:20:05:34 +0800] "GET /travel HTTP/1.1" 302 - http-bio-9959-exec-1 0
+0:0:0:0:0:0:0:1 - - [18/Jun/2021:20:05:34 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-9959-exec-2 0
+0:0:0:0:0:0:0:1 - - [18/Jun/2021:20:05:34 +0800] "GET /travel/findUserServlet HTTP/1.1" 200 4 http-bio-9959-exec-3 136
+0:0:0:0:0:0:0:1 - - [18/Jun/2021:20:05:46 +0800] "GET /travel/user/active HTTP/1.1" 200 - http-bio-9959-exec-5 66
