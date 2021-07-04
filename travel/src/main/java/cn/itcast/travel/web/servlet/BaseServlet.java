@@ -19,7 +19,6 @@ public class BaseServlet extends HttpServlet {
         //完成方法分发
         //1.获取请求路径
         String uri = req.getRequestURI(); //   /travel/user/add
-        System.out.println("请求uri:" + uri);//  /travel/user/add
         //2.获取方法名称
         String methodName = uri.substring(uri.lastIndexOf('/') + 1);
         System.out.println("方法名称：" + methodName);
