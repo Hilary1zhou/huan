@@ -12,7 +12,7 @@ public class RouteImgImpl implements RouteImgDao {
     private JdbcTemplate template = new JdbcTemplate(JDBCUtils.getDataSource());
 
     @Override
-    public List<RouteImg> findByRid (int rid) {
+    public List<RouteImg> findByRid(int rid) {
         String sql = "select * from tab_route_img where rid = ?";
         return template.query(sql, new BeanPropertyRowMapper<RouteImg>(RouteImg.class), rid);
     }

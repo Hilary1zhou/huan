@@ -17,7 +17,7 @@ public interface RouteService {
      * @param rname
      * @return
      */
-    public PageBean<Route> pageQuery (int cid, int currentPage, int pageSize, String rname);
+    public PageBean<Route> pageQuery(int cid, int currentPage, int pageSize, String rname);
 
     /**
      * ¸ù¾Ýid²éÑ¯
@@ -25,5 +25,5 @@ public interface RouteService {
      * @param rid
      * @return
      */
-    Route findOne (String rid);
+    Route findOne(String rid);
 }

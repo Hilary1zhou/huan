@@ -9,5 +9,5 @@ public interface SellerDao {
      * @param sid
      * @return
      */
-    public Seller findBySid (int sid);
+    public Seller findBySid(int sid);
 }

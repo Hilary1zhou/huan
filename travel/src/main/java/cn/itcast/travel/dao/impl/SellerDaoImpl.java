@@ -10,7 +10,7 @@ public class SellerDaoImpl implements SellerDao {
     private JdbcTemplate template = new JdbcTemplate(JDBCUtils.getDataSource());
 
     @Override
-    public Seller findBySid (int sid) {
+    public Seller findBySid(int sid) {
         String sql = "select * from tab_seller where sid = ?";
         return template.queryForObject(sql, new BeanPropertyRowMapper<Seller>(Seller.class), sid);
     }

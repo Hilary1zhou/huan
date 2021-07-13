@@ -10,13 +10,14 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet ("/category/*")
+@WebServlet("/category/*")
 public class CategoryServlet extends BaseServlet {
     private CategoryService service = new CategoryServiceImpl();
 
-    public void findAll (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void findAll(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         List<Category> cs = service.findAll();
-        //将传入的对象序列化json，写回客户端
+        // 将传入的对象序列化json，写回客户端
         writeValue(cs, response);
     }
 }

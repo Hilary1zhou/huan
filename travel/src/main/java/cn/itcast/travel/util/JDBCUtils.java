@@ -12,12 +12,12 @@ import java.sql.Statement;
 import java.util.Properties;
 
 /*
-	1. 声明静态数据源成员变量
-	2. 创建连接池对象
-	3. 定义公有的得到数据源的方法
-	4. 定义得到连接对象的方法
-	5. 定义关闭资源的方法
- */
+1. 声明静态数据源成员变量
+2. 创建连接池对象
+3. 定义公有的得到数据源的方法
+4. 定义得到连接对象的方法
+5. 定义关闭资源的方法
+*/
 public class JDBCUtils {
     // 1.	声明静态数据源成员变量
     private static DataSource ds;
@@ -39,17 +39,17 @@ public class JDBCUtils {
     }
 
     // 3. 定义公有的得到数据源的方法
-    public static DataSource getDataSource ( ) {
+    public static DataSource getDataSource() {
         return ds;
     }
 
     // 4. 定义得到连接对象的方法
-    public static Connection getConnection ( ) throws SQLException {
+    public static Connection getConnection() throws SQLException {
         return ds.getConnection();
     }
 
     // 5.定义关闭资源的方法
-    public static void close (Connection conn, Statement stmt, ResultSet rs) {
+    public static void close(Connection conn, Statement stmt, ResultSet rs) {
         if (rs != null) {
             try {
                 rs.close();
@@ -73,7 +73,7 @@ public class JDBCUtils {
     }
 
     // 6.重载关闭方法
-    public static void close (Connection conn, Statement stmt) {
+    public static void close(Connection conn, Statement stmt) {
         close(conn, stmt, null);
     }
 }

@@ -9,18 +9,18 @@ public interface UserDao {
      * @param username
      * @return
      */
-    public User FindByUsername (String username);
+    public User FindByUsername(String username);
 
     /**
      * 保存用户信息
      *
      * @param user
      */
-    public void save (User user);
+    public void save(User user);
 
-    public User FindByCode (String code);
+    public User FindByCode(String code);
 
-    void updateStatus (User user);
+    void updateStatus(User user);
 
-    User FindByUsernameAndPassword (String username, String password);
+    User FindByUsernameAndPassword(String username, String password);
 }

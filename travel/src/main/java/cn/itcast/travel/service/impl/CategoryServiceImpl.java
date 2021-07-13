@@ -22,16 +22,10 @@ public class CategoryServiceImpl implements CategoryService {
      * @return
      */
     @Override
-    public List<Category> findAll ( ) {
-        /**
-         * 缓存优化
-         *   1.从redis中查询
-         *   2.判断查询的集合是否为空
-         *   3.如果为空从数据库查询，再将数据存入redis
-         *   4.如果不为空，从redis查询，将set数据存入list
-         */
+    public List<Category> findAll() {
+        /** 缓存优化 1.从redis中查询 2.判断查询的集合是否为空 3.如果为空从数据库查询，再将数据存入redis 4.如果不为空，从redis查询，将set数据存入list */
         Jedis jedis = JedisUtil.getJedis();
-        Set<Tuple> category = jedis.zrangeWithScores("category", 0, - 1);
+        Set<Tuple> category = jedis.zrangeWithScores("category", 0, -1);
         List<Category> cs = null;
         if (category == null || category.size() == 0) {
             System.out.println("从数据库查询。。。");
@@ -48,10 +42,8 @@ public class CategoryServiceImpl implements CategoryService {
                 categorys.setCname(tuple.getElement());
                 categorys.setCid((int) tuple.getScore());
                 cs.add(categorys);
-
             }
         }
         return cs;
     }
-
 }

@@ -14,11 +14,11 @@ public class RouteDaoImpl implements RouteDao {
     private JdbcTemplate template = new JdbcTemplate(JDBCUtils.getDataSource());
 
     @Override
-    public int findTotalCount (int cid, String rname) {
-        //定义sql模板
+    public int findTotalCount(int cid, String rname) {
+        // 定义sql模板
         String sql = "select count(*) from tab_route where 1=1 ";
         StringBuilder sb = new StringBuilder(sql);
-        //条件集合
+        // 条件集合
         List params = new ArrayList();
         if (cid != 0) {
             sb.append("and cid = ? ");
@@ -34,11 +34,11 @@ public class RouteDaoImpl implements RouteDao {
     }
 
     @Override
-    public List<Route> findByPage (int cid, int start, int pageSize, String rname) {
-        //定义sql模板
+    public List<Route> findByPage(int cid, int start, int pageSize, String rname) {
+        // 定义sql模板
         String sql = "select * from tab_route where 1 = 1  ";
         StringBuilder sb = new StringBuilder(sql);
-        //条件集合
+        // 条件集合
         List params = new ArrayList();
         if (cid != 0) {
             sb.append(" and cid = ?");
@@ -57,7 +57,7 @@ public class RouteDaoImpl implements RouteDao {
     }
 
     @Override
-    public Route findOne (int rid) {
+    public Route findOne(int rid) {
         String sql = "select * from tab_route where rid = ?";
         return template.queryForObject(sql, new BeanPropertyRowMapper<Route>(Route.class), rid);
     }
